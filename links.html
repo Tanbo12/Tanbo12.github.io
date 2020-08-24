@@ -8,9 +8,18 @@
     <script src="./jquery-1.12.4.js"></script>
     <style>
         p {
+            position: absolute;
+            top: 50px;
+            left: 100px;
             font-size: 100px;
             color: palevioletred;
             display: none;
+        }
+
+        img {
+            position: absolute;
+            top: 50px;
+            left: 100px;
         }
     </style>
 </head>
@@ -18,9 +27,17 @@
 <body>
     <button>点这里</button>
     <p>说你又信</p>
+    <img src="./images/错觉6.png" alt="">
     <script>
-        $('button').click(function () {
-            $('p').fadeIn(2000)
+        // $('button').click(function () {
+        //     $('p').fadeIn(2000)
+        // });
+
+        $('img').animate({
+            let: 1000,
+            top: 500,
+        }, 5000, function () {
+            $('p').fadeIn(5000);
         })
     </script>
 </body>
